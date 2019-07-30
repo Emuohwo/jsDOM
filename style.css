@@ -1,0 +1,92 @@
+
+#wrapper {
+    display:grid;
+    grid-template-columns: repeat(5, ifr); 
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+   /* border: 14px groove gray; */
+  /* outline: 14px groove grey; */
+    padding: 1em;
+    grid-template-areas: "header header header header header"
+                         "main main main main main"
+                         "footer footer footer footer footer";
+}
+
+@media screen and (min-width:560px) and (max-width:800px) {
+        
+    #wrapper {
+        display:grid;
+        grid-template-columns: repeat(5, ifr);
+        grid-gap: 1em;
+        border: 14px groove gray;
+        outline: 14px groove grey;
+        padding: 1em;
+        grid-template-areas: "header header header header header"
+                             " main footer footer footer footer";
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1500px) {
+        
+    #wrapper {
+        display:grid;
+        grid-template-columns: repeat(5, ifr);
+        grid-gap: 1em;
+        border: 14px groove gray;
+        outline: 14px groove grey;
+        padding: 1em;
+        grid-template-areas: "main main main main main"
+                             " footer footer footer footer footer"
+                             "header header header header header";
+    }
+}
+
+header {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 3em;
+}
+
+#book-list {
+    grid-area: footer;
+    background-color: aqua;
+    padding: 3em;
+}
+
+#add-book {
+    grid-area: main;
+    background-color: cornflowerblue;
+    padding: 1em;
+    margin-left: 40px;
+    align-self: center;
+}
+
+#add-book label {
+   line-height:  50px;
+}
+
+
+
+#hide {
+    width:30px;
+}
+
+#tabbed-content li {
+    display: inline-block;
+    padding: 10px 14px;
+    background: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#tabbed-content .panel {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#tabbed-content .panel.active {
+    display: block;
+}
